@@ -1,26 +1,23 @@
 import { useState } from 'react';
 
 const DataDisplay = ({ data }) => {
-  console.log(data);
   const date = data.days[0].datetime;
   const temp = data.currentConditions.temp;
   const humidity = data.currentConditions.humidity;
   const windSpeed = data.currentConditions.windspeed;
   const [isFarenheight, setIsFarenheight] = useState(true);
+  const [tempValue, setTempValue] = useState(temp);
 
   const showFahrenheit = () => {
-    // if (isFarenheight) return;
-    // else {
-    //   setTemp((temp * 1.8 + 32).toFixed(2));
-    //   setIsFarenheight(true);
-    // }
+    setTempValue(temp);
+    setIsFarenheight(true);
   };
 
   const showCelsius = () => {
-    // if (isFarenheight) {
-    //   setTemp((((temp - 32) * 5) / 9).toFixed(2));
-    //   setIsFarenheight(false);
-    // } else return;
+    if (isFarenheight) {
+      setTempValue((((tempValue - 32) * 5) / 9).toFixed(2));
+      setIsFarenheight(false);
+    } else return;
   };
 
   return (
@@ -31,7 +28,7 @@ const DataDisplay = ({ data }) => {
       </div>
 
       <div className='flex mt-10'>
-        <p className='text-[5rem]'>{temp}</p>
+        <p className='text-[5rem]'>{isFarenheight ? temp : tempValue}</p>
         <div className='font-semibold'>
           <button
             onClick={() => {
