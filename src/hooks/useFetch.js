@@ -3,7 +3,7 @@ import { useState } from 'react';
 export const useFetch = () => {
   const [data, setData] = useState('');
   const [loading, setLoading] = useState(false);
-  const [message, setMessage] = useState('');
+  const [status, setStatus] = useState('');
 
   const getData = async (location) => {
     try {
@@ -16,8 +16,9 @@ export const useFetch = () => {
         body: location,
       });
 
-      const { data } = await res.json();
+      const { status, data } = await res.json();
       setData(data);
+      setStatus(status);
       setLoading(false);
     } catch (error) {
       console.log(error);
@@ -25,5 +26,5 @@ export const useFetch = () => {
     }
   };
 
-  return { data, loading, getData };
+  return { status, data, loading, getData };
 };

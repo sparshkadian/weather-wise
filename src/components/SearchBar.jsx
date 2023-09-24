@@ -6,7 +6,7 @@ import Spinner from './Spinner';
 const SearchBar = () => {
   const [location, setLocation] = useState('');
   const [message, setMessage] = useState('');
-  const { data, loading, getData } = useFetch();
+  const { status, data, loading, getData } = useFetch();
 
   const handleChange = (e) => {
     setLocation(e.target.value);
@@ -52,7 +52,13 @@ const SearchBar = () => {
 
       {loading && <Spinner />}
 
-      {!loading && data && <DataDisplay data={data} />}
+      {status === 'fail' && (
+        <p className='text-lg text-center'>
+          Location not found, Please try again!
+        </p>
+      )}
+
+      {status === 'success' && !loading && <DataDisplay data={data} />}
     </>
   );
 };
