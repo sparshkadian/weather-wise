@@ -4,10 +4,6 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Marcellus&family=Montserrat:wght@300;400;500;600;700&family=Vollkorn:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&display=swap');
 
-body {
-  background-color: #f7f7f7;
-}
-
 /* ////////SEARCH-BAR///////// */
 .enter-location {
   font-family: 'Marcellus', 'sans-serif';
