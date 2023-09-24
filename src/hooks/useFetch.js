@@ -8,7 +8,7 @@ export const useFetch = () => {
   const getData = async (location) => {
     try {
       setLoading(true);
-      const res = await fetch(`http://localhost:4000/${location}`, {
+      const res = await fetch(`https://weather-wise.onrender.com/${location}`, {
         method: 'POST',
         headers: {
           'Content-type': 'application/json',
