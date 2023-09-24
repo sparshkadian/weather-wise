@@ -4,7 +4,7 @@ import animation from './../animations/animation.json';
 
 const LandingPage = () => {
   return (
-    <div className='landing-page bg-white shadow-xl rounded-md sm:grid grid-cols-1 sm:grid-cols-2 w-4/5 h-[65vh] sm:h-max m-auto mt-[100px] sm:mt-[150px] md:mt-15 lg:mt-12 p-4'>
+    <div className='landing-page bg-white shadow-xl rounded-md sm:grid grid-cols-1 sm:grid-cols-2 w-4/5 h-[50vh] sm:h-max m-auto mt-[100px] sm:mt-[150px] md:mt-15 lg:mt-12 p-4'>
       <div className='hidden sm:block self-center'>
         <Lottie animationData={animation} />
       </div>
