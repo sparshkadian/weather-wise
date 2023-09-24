@@ -2,9 +2,9 @@ import { useState } from 'react';
 
 const DataDisplay = ({ data }) => {
   const date = data.days[0].datetime;
-  const temp = data.currentConditions.temp;
-  const humidity = data.currentConditions.humidity;
-  const windSpeed = data.currentConditions.windspeed;
+  const temp = data.days[0].temp;
+  const humidity = data.days[0].humidity;
+  const windSpeed = data.days[0].windspeed;
   const [isFarenheight, setIsFarenheight] = useState(true);
   const [tempValue, setTempValue] = useState(temp);
 
@@ -66,7 +66,7 @@ const DataDisplay = ({ data }) => {
       </div>
 
       <div className='mt-10'>
-        <p className='text-xl'>{data.currentConditions.conditions}</p>
+        <p className='text-xl'>{data.days[0].conditions}</p>
       </div>
     </div>
   );

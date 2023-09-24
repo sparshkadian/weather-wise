@@ -52,7 +52,7 @@ const SearchBar = () => {
 
       {loading && <Spinner />}
 
-      {status === 'fail' && (
+      {status === 'fail' && !loading && (
         <p className='text-lg text-center'>
           Location not found, Please try again!
         </p>
