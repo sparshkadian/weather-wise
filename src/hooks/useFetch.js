@@ -2,7 +2,7 @@ import { useState } from 'react';
 
 export const useFetch = () => {
   const [data, setData] = useState('');
-  const [loading, setLoading] = useState(false);
+  const [loading, setLoading] = useState(true);
   const [message, setMessage] = useState('');
 
   const getData = async (location) => {
@@ -16,9 +16,6 @@ export const useFetch = () => {
         body: location,
       });
 
-      // const {
-      //   data: { days: data },
-      // } = await res.json();
       const { data } = await res.json();
       setData(data);
       setLoading(false);
