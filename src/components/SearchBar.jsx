@@ -25,7 +25,7 @@ const SearchBar = () => {
 
   return (
     <>
-      <div className='flex justify-center p-4'>
+      <div className='mt-4 flex justify-center p-4'>
         <form
           onSubmit={handleSubmit}
           className='flex flex-col items-center w-4/5 md:w-1/2 lg:w-[40%]'

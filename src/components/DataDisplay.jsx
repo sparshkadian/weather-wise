@@ -24,14 +24,14 @@ const DataDisplay = ({ data }) => {
   };
 
   return (
-    <div className='w-4/5 lg:w-1/2 flex flex-col items-center border-2 rounded-md shadow-xl m-auto p-2'>
+    <div className='mt-5 w-4/5 lg:w-1/2 flex flex-col items-center border-2 rounded-md shadow-xl m-auto p-2'>
       <div className='w-full flex justify-around text-xl'>
         <p className='capitalize'>{data.address}</p>
         <p>{date}</p>
       </div>
 
       <div className='flex mt-10'>
-        <p className='text-[5rem]'>{temp}&deg;</p>
+        <p className='text-[5rem]'>{temp}</p>
         <div className='font-semibold'>
           <button
             onClick={() => {
@@ -57,7 +57,7 @@ const DataDisplay = ({ data }) => {
         </div>
       </div>
 
-      <div className='mt-2 flex gap-5'>
+      <div className='mt-3 flex gap-5'>
         <div className='flex gap-1'>
           <img src='../humidity.png' alt='humidity' width={25} />
           <p>{humidity}%</p>
