@@ -2,7 +2,7 @@ import { useState } from 'react';
 
 export const useFetch = () => {
   const [data, setData] = useState('');
-  const [loading, setLoading] = useState(true);
+  const [loading, setLoading] = useState(false);
   const [message, setMessage] = useState('');
 
   const getData = async (location) => {
