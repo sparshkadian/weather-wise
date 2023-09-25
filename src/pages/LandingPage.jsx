@@ -22,7 +22,7 @@ const LandingPage = () => {
           A Web App to get Weather Data of your Location
         </p>
         <button className='bg-black px-6 py-3 sm:px-4 sm:py-2 rounded-md text-white'>
-          <Link to='/home'>Get Started</Link>
+          <Link to='/main'>Get Started</Link>
         </button>
       </div>
     </div>

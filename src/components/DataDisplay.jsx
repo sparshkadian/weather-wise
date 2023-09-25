@@ -3,6 +3,8 @@ import { useState } from 'react';
 const DataDisplay = ({ data }) => {
   const date = data.days[0].datetime;
   const temp = data.days[0].temp;
+  const tempMax = data.days[0].tempmax;
+  const tempMin = data.days[0].tempmin;
   const humidity = data.days[0].humidity;
   const windSpeed = data.days[0].windspeed;
   const [isFarenheight, setIsFarenheight] = useState(true);
@@ -63,6 +65,17 @@ const DataDisplay = ({ data }) => {
           <img src='../wind.png' alt='humidity' width={25} />
           <p>{windSpeed}mph</p>
         </div>
+      </div>
+
+      <div className='mt-10 flex gap-10'>
+        <p>
+          Maximum Temp: <span className='font-semibold'>{tempMax}</span>{' '}
+          <span className='text-zinc-500'>&deg;F</span>
+        </p>
+        <p>
+          Minimum Temp: <span className='font-semibold'>{tempMin}</span>{' '}
+          <span className='text-zinc-500'>&deg;F</span>
+        </p>
       </div>
 
       <div className='mt-10'>
