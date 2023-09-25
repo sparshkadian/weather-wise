@@ -67,12 +67,12 @@ const DataDisplay = ({ data }) => {
         </div>
       </div>
 
-      <div className='mt-10 flex gap-10'>
+      <div className='mt-10 sm:flex gap-10'>
         <p>
           Maximum Temp: <span className='font-semibold'>{tempMax}</span>{' '}
           <span className='text-zinc-500'>&deg;F</span>
         </p>
-        <p>
+        <p className='mt-2 sm:mt-0'>
           Minimum Temp: <span className='font-semibold'>{tempMin}</span>{' '}
           <span className='text-zinc-500'>&deg;F</span>
         </p>
