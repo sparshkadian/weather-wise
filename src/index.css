@@ -13,6 +13,14 @@ body {
   font-family: 'Marcellus', 'sans-serif';
 }
 
+.alert__modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+}
+
 /* ////////SEARCH-BAR///////// */
 .enter-location {
   font-family: 'Marcellus', 'sans-serif';
